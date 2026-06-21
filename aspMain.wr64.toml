@@ -1,0 +1,7 @@
+text_offset = 0x7F5F0
+text_size = 0x1000
+text_address = 0x4001000
+rom_file_path = "wr64.us.revA.z64"
+output_file_path = "rsp/aspMain.cpp"
+output_function_name = "aspMain"
+extra_indirect_branch_targets = []

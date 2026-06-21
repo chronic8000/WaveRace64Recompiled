@@ -1,0 +1,14 @@
+# Config file for Wave Race 64 USA Rev A static recompilation.
+
+[input]
+entrypoint = 0x80047AA4
+output_func_path = "RecompiledFuncs"
+relocatable_sections_path = "overlays.us.txt"
+symbols_file_path = "wr64.us.syms.toml"
+rom_file_path = "wr64.us.revA.z64"
+use_lookup_for_all_function_calls = true
+
+[patches]
+stubs = []
+
+ignored = []

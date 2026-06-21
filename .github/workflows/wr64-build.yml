@@ -1,0 +1,42 @@
+name: Wave Race 64 Recompiled
+
+on:
+  push:
+    branches: [dev, main, wr64]
+  pull_request:
+
+jobs:
+  recomp-tooling:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python deps
+        run: pip install rabbitizer xxhash
+
+      - name: Verify ROM tooling (no ROM in CI)
+        run: |
+          python tools/spec_parser.py
+          python tools/rom_extract.py
+          python tools/overlay_gen.py
+
+      - name: Validate port artifacts
+        run: python tools/validate_port.py
+
+  build-n64recomp:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Build N64Recomp
+        run: |
+          cmake -S N64Recomp -B N64Recomp/build
+          cmake --build N64Recomp/build --config Release --target N64RecompCLI

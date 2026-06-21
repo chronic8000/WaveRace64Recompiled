@@ -1,0 +1,3785 @@
+[
+  {
+    "name": "codeSEG",
+    "flags": [
+      "BOOT",
+      "OBJECT"
+    ],
+    "includes": [
+      "code.o",
+      "$(ROOT)/usr/lib/PR/rspboot.o",
+      "$(ROOT)/usr/lib/PR/gspF3DEX.fifo.o",
+      "audio/zh/audio_hm.o",
+      "audio/zh/audio_hs.o",
+      "audio/zh/audio_hb.o",
+      "audio/zh/audio_hw.o",
+      "audio/audio_hm.o",
+      "audio/audio_hs.o",
+      "audio/audio_hb.o",
+      "audio/audio_hw.o",
+      "audio/aspMain.o"
+    ],
+    "entry": "BootProcess",
+    "address": "BOOT_ADDR",
+    "address_value": 2147772416,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": true,
+    "is_code": true,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "loadCodeSEG",
+    "flags": [],
+    "includes": [
+      "dai_anim_data.o",
+      "hjm_camera.o",
+      "kn_psrestart.o",
+      "kn_psname.o",
+      "kn_psscrec.o",
+      "kn_message.o",
+      "kn_pause.o",
+      "kn_shape.o",
+      "kn_gword.o",
+      "kn_mask.o",
+      "kn_font.o",
+      "kn_init.o",
+      "enmath.o",
+      "enstatus.o"
+    ],
+    "entry": null,
+    "address": null,
+    "address_value": null,
+    "after": "codeSEG",
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": true,
+    "is_object": false,
+    "is_overlay": true
+  },
+  {
+    "name": "loadAudioTable",
+    "flags": [],
+    "includes": [
+      "audio/audiotable.o"
+    ],
+    "entry": null,
+    "address": "LOAD_ATABLE_ADDR",
+    "address_value": 2147768320,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": false,
+    "is_overlay": false
+  },
+  {
+    "name": "zbufferSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ot_zbuffer.o"
+    ],
+    "entry": null,
+    "address": "Z_BUFFER",
+    "address_value": 2150236160,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "fbufferSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ot_fbuffer.o"
+    ],
+    "entry": null,
+    "address": "FRAME_BUFFER",
+    "address_value": 2151217152,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "dramStackSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_stack.o"
+    ],
+    "entry": null,
+    "address": "DRAM_STACK",
+    "address_value": 2147768320,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "cameraBuffer",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "hjm_memory.o"
+    ],
+    "entry": null,
+    "address": "CAMERA_BUFFER",
+    "address_value": 2153250816,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "staticSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ot_ssegment.o",
+      "ot_ssletter.o",
+      "ot_ssmask.o",
+      "ot_sshover.o",
+      "ot_sscup.o"
+    ],
+    "entry": null,
+    "address": "STATIC_SEGMENT",
+    "address_value": 1,
+    "after": null,
+    "number": null,
+    "segment_id": 1,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "staticGameSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_sssea.o",
+      "sot_ssworld.o",
+      "enstatic.o",
+      "enssbuoy_zh.o",
+      "enssbuoy.o",
+      "enssfont.o",
+      "ensssplash.o",
+      "kn_sscommon.o"
+    ],
+    "entry": null,
+    "address": null,
+    "address_value": null,
+    "after": "staticSEG",
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "nusmarkSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_ssnusmark.o"
+    ],
+    "entry": null,
+    "address": null,
+    "address_value": null,
+    "after": "\"codeSEG\"",
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "staticEngSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_sslanguage.o"
+    ],
+    "entry": null,
+    "address": null,
+    "address_value": null,
+    "after": "staticGameSEG",
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "staticGerSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_ssgerman.o"
+    ],
+    "entry": null,
+    "address": null,
+    "address_value": null,
+    "after": "staticGameSEG",
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "autoSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ot_asegment.o"
+    ],
+    "entry": null,
+    "address": "AUTO_SEGMENT",
+    "address_value": 2,
+    "after": null,
+    "number": null,
+    "segment_id": 2,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "dynamicSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ot_dsegment.o"
+    ],
+    "entry": null,
+    "address": "DYNAMIC_SEGMENT",
+    "address_value": 3,
+    "after": null,
+    "number": null,
+    "segment_id": 3,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "screenSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ot_vsegment.o"
+    ],
+    "entry": null,
+    "address": "SCREEN_SEGMENT",
+    "address_value": 4,
+    "after": null,
+    "number": null,
+    "segment_id": 4,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "endynamic",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "endynamic.o"
+    ],
+    "entry": null,
+    "address": "ENDYNAMIC_SEGMENT",
+    "address_value": 5,
+    "after": null,
+    "number": null,
+    "segment_id": 5,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "sot_dynamic",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_dynamic.o"
+    ],
+    "entry": null,
+    "address": "SOT_DYNAMIC_SEGMENT",
+    "address_value": 6,
+    "after": null,
+    "number": null,
+    "segment_id": 6,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "knDynamicSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_dynamic.o"
+    ],
+    "entry": null,
+    "address": "KN_DYNAMIC_SEGMENT",
+    "address_value": 7,
+    "after": null,
+    "number": null,
+    "segment_id": 7,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "anime",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_anime.o"
+    ],
+    "entry": null,
+    "address": null,
+    "address_value": null,
+    "after": null,
+    "number": 0,
+    "segment_id": 0,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "endface",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_endface.o"
+    ],
+    "entry": null,
+    "address": null,
+    "address_value": null,
+    "after": null,
+    "number": 0,
+    "segment_id": 0,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "progEdit",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "enpsedit.o",
+      "enpsmachine.o"
+    ],
+    "entry": null,
+    "address": "EDIT_BANK",
+    "address_value": 2150793216,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": true,
+    "is_object": true,
+    "is_overlay": true
+  },
+  {
+    "name": "progCPack",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_pscpack.o"
+    ],
+    "entry": null,
+    "address": "PROG_BANK",
+    "address_value": 2150389760,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": true,
+    "is_object": true,
+    "is_overlay": true
+  },
+  {
+    "name": "progTitle",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_pstitle.o"
+    ],
+    "entry": null,
+    "address": "PROG_BANK",
+    "address_value": 2150389760,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": true,
+    "is_object": true,
+    "is_overlay": true
+  },
+  {
+    "name": "progRace",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_psrace.o"
+    ],
+    "entry": null,
+    "address": "PROG_BANK",
+    "address_value": 2150389760,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": true,
+    "is_object": true,
+    "is_overlay": true
+  },
+  {
+    "name": "progMachine",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_psmachine.o"
+    ],
+    "entry": null,
+    "address": "PROG_BANK",
+    "address_value": 2150389760,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": true,
+    "is_object": true,
+    "is_overlay": true
+  },
+  {
+    "name": "progCTitle",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_psctitle.o"
+    ],
+    "entry": null,
+    "address": "PROG_BANK",
+    "address_value": 2150389760,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": true,
+    "is_object": true,
+    "is_overlay": true
+  },
+  {
+    "name": "progCourse",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_pscourse.o"
+    ],
+    "entry": null,
+    "address": "PROG_BANK",
+    "address_value": 2150389760,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": true,
+    "is_object": true,
+    "is_overlay": true
+  },
+  {
+    "name": "progResult",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_psresult.o",
+      "kn_psgameover.o"
+    ],
+    "entry": null,
+    "address": "PROG_BANK",
+    "address_value": 2150389760,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": true,
+    "is_object": true,
+    "is_overlay": true
+  },
+  {
+    "name": "progRecord",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_psrecord.o"
+    ],
+    "entry": null,
+    "address": "PROG_BANK",
+    "address_value": 2150389760,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": true,
+    "is_object": true,
+    "is_overlay": true
+  },
+  {
+    "name": "progCalc",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_pscalc.o"
+    ],
+    "entry": null,
+    "address": "PROG_BANK",
+    "address_value": 2150389760,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": true,
+    "is_object": true,
+    "is_overlay": true
+  },
+  {
+    "name": "progVsResult",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_psvsresult.o"
+    ],
+    "entry": null,
+    "address": "PROG_BANK",
+    "address_value": 2150389760,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": true,
+    "is_object": true,
+    "is_overlay": true
+  },
+  {
+    "name": "progConfig",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_psconfig.o"
+    ],
+    "entry": null,
+    "address": "PROG_BANK",
+    "address_value": 2150389760,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": true,
+    "is_object": true,
+    "is_overlay": true
+  },
+  {
+    "name": "progCfgName",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_pscfgname.o"
+    ],
+    "entry": null,
+    "address": "PROG_BANK",
+    "address_value": 2150389760,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": true,
+    "is_object": true,
+    "is_overlay": true
+  },
+  {
+    "name": "progCfgRec",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_pscfgrec.o"
+    ],
+    "entry": null,
+    "address": "PROG_BANK",
+    "address_value": 2150389760,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": true,
+    "is_object": true,
+    "is_overlay": true
+  },
+  {
+    "name": "progCfgCond",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_pscfgcond.o"
+    ],
+    "entry": null,
+    "address": "PROG_BANK",
+    "address_value": 2150389760,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": true,
+    "is_object": true,
+    "is_overlay": true
+  },
+  {
+    "name": "progCfgSound",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_pscfgsound.o"
+    ],
+    "entry": null,
+    "address": "PROG_BANK",
+    "address_value": 2150389760,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": true,
+    "is_object": true,
+    "is_overlay": true
+  },
+  {
+    "name": "progCfgErase",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_pscfgerase.o"
+    ],
+    "entry": null,
+    "address": "PROG_BANK",
+    "address_value": 2150389760,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": true,
+    "is_object": true,
+    "is_overlay": true
+  },
+  {
+    "name": "progCfgSave",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_pscfgsave.o"
+    ],
+    "entry": null,
+    "address": "PROG_BANK",
+    "address_value": 2150389760,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": true,
+    "is_object": true,
+    "is_overlay": true
+  },
+  {
+    "name": "progRestart",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_psrestart2.o"
+    ],
+    "entry": null,
+    "address": "PROG_BANK",
+    "address_value": 2150389760,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": true,
+    "is_object": true,
+    "is_overlay": true
+  },
+  {
+    "name": "progTourEnd",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_pstourend.o"
+    ],
+    "entry": null,
+    "address": "PROG_BANK",
+    "address_value": 2150389760,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": true,
+    "is_object": true,
+    "is_overlay": true
+  },
+  {
+    "name": "course0",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ensscrs0.o",
+      "ensscrs0_zh.o"
+    ],
+    "entry": null,
+    "address": "COURSE_SEGMENT",
+    "address_value": 13,
+    "after": null,
+    "number": null,
+    "segment_id": 13,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course1",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ensscrs1.o",
+      "ensscrs1_zh.o"
+    ],
+    "entry": null,
+    "address": "COURSE_SEGMENT",
+    "address_value": 13,
+    "after": null,
+    "number": null,
+    "segment_id": 13,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course2",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ensscrs2.o",
+      "ensscrs2_zh.o"
+    ],
+    "entry": null,
+    "address": "COURSE_SEGMENT",
+    "address_value": 13,
+    "after": null,
+    "number": null,
+    "segment_id": 13,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course3",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ensscrs3.o",
+      "ensscrs3_zh.o"
+    ],
+    "entry": null,
+    "address": "COURSE_SEGMENT",
+    "address_value": 13,
+    "after": null,
+    "number": null,
+    "segment_id": 13,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course4",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ensscrs4.o",
+      "ensscrs4_zh.o"
+    ],
+    "entry": null,
+    "address": "COURSE_SEGMENT",
+    "address_value": 13,
+    "after": null,
+    "number": null,
+    "segment_id": 13,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course5",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ensscrs5.o",
+      "ensscrs5_zh.o"
+    ],
+    "entry": null,
+    "address": "COURSE_SEGMENT",
+    "address_value": 13,
+    "after": null,
+    "number": null,
+    "segment_id": 13,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course6",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ensscrs6.o",
+      "ensscrs6_zh.o"
+    ],
+    "entry": null,
+    "address": "COURSE_SEGMENT",
+    "address_value": 13,
+    "after": null,
+    "number": null,
+    "segment_id": 13,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course7",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ensscrs7.o",
+      "ensscrs7_zh.o"
+    ],
+    "entry": null,
+    "address": "COURSE_SEGMENT",
+    "address_value": 13,
+    "after": null,
+    "number": null,
+    "segment_id": 13,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course8",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ensscrs8.o",
+      "ensscrs8_zh.o"
+    ],
+    "entry": null,
+    "address": "COURSE_SEGMENT",
+    "address_value": 13,
+    "after": null,
+    "number": null,
+    "segment_id": 13,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course7_end",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ensscrs7_end.o",
+      "ensscrs7_end_zh.o"
+    ],
+    "entry": null,
+    "address": "COURSE_SEGMENT",
+    "address_value": 13,
+    "after": null,
+    "number": null,
+    "segment_id": 13,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course1_2p",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ensscrs1_2p.o",
+      "ensscrs1_2p_zh.o"
+    ],
+    "entry": null,
+    "address": "COURSE_SEGMENT",
+    "address_value": 13,
+    "after": null,
+    "number": null,
+    "segment_id": 13,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course2_2p",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ensscrs2_2p.o",
+      "ensscrs2_2p_zh.o"
+    ],
+    "entry": null,
+    "address": "COURSE_SEGMENT",
+    "address_value": 13,
+    "after": null,
+    "number": null,
+    "segment_id": 13,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course3_2p",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ensscrs3_2p.o",
+      "ensscrs3_2p_zh.o"
+    ],
+    "entry": null,
+    "address": "COURSE_SEGMENT",
+    "address_value": 13,
+    "after": null,
+    "number": null,
+    "segment_id": 13,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course4_2p",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ensscrs4_2p.o",
+      "ensscrs4_2p_zh.o"
+    ],
+    "entry": null,
+    "address": "COURSE_SEGMENT",
+    "address_value": 13,
+    "after": null,
+    "number": null,
+    "segment_id": 13,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course5_2p",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ensscrs5_2p.o",
+      "ensscrs5_2p_zh.o"
+    ],
+    "entry": null,
+    "address": "COURSE_SEGMENT",
+    "address_value": 13,
+    "after": null,
+    "number": null,
+    "segment_id": 13,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course6_2p",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ensscrs6_2p.o",
+      "ensscrs6_2p_zh.o"
+    ],
+    "entry": null,
+    "address": "COURSE_SEGMENT",
+    "address_value": 13,
+    "after": null,
+    "number": null,
+    "segment_id": 13,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course7_2p",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ensscrs7_2p.o",
+      "ensscrs7_2p_zh.o"
+    ],
+    "entry": null,
+    "address": "COURSE_SEGMENT",
+    "address_value": 13,
+    "after": null,
+    "number": null,
+    "segment_id": 13,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course8_2p",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ensscrs8_2p.o",
+      "ensscrs8_2p_zh.o"
+    ],
+    "entry": null,
+    "address": "COURSE_SEGMENT",
+    "address_value": 13,
+    "after": null,
+    "number": null,
+    "segment_id": 13,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course1_com",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ensscom1.o",
+      "ensscom1_zh.o"
+    ],
+    "entry": null,
+    "address": "COURSE_COM_SEGMENT",
+    "address_value": 14,
+    "after": null,
+    "number": null,
+    "segment_id": 14,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course2_com",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ensscom2.o",
+      "ensscom2_zh.o"
+    ],
+    "entry": null,
+    "address": "COURSE_COM_SEGMENT",
+    "address_value": 14,
+    "after": null,
+    "number": null,
+    "segment_id": 14,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course3_com",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ensscom3_zh.o",
+      "ensscom3.o"
+    ],
+    "entry": null,
+    "address": "COURSE_COM_SEGMENT",
+    "address_value": 14,
+    "after": null,
+    "number": null,
+    "segment_id": 14,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course4_com",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ensscom4_zh.o",
+      "ensscom4.o"
+    ],
+    "entry": null,
+    "address": "COURSE_COM_SEGMENT",
+    "address_value": 14,
+    "after": null,
+    "number": null,
+    "segment_id": 14,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course5_com",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ensscom5_zh.o",
+      "ensscom5.o"
+    ],
+    "entry": null,
+    "address": "COURSE_COM_SEGMENT",
+    "address_value": 14,
+    "after": null,
+    "number": null,
+    "segment_id": 14,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course6_com",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ensscom6_zh.o",
+      "ensscom6.o"
+    ],
+    "entry": null,
+    "address": "COURSE_COM_SEGMENT",
+    "address_value": 14,
+    "after": null,
+    "number": null,
+    "segment_id": 14,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course7_com",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ensscom7_zh.o",
+      "ensscom7.o"
+    ],
+    "entry": null,
+    "address": "COURSE_COM_SEGMENT",
+    "address_value": 14,
+    "after": null,
+    "number": null,
+    "segment_id": 14,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course8_com",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ensscom8_zh.o",
+      "ensscom8.o"
+    ],
+    "entry": null,
+    "address": "COURSE_COM_SEGMENT",
+    "address_value": 14,
+    "after": null,
+    "number": null,
+    "segment_id": 14,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "start_gate1",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "enssstart1_zh.o",
+      "enssstart1.o"
+    ],
+    "entry": null,
+    "address": "START_GATE_ADDR",
+    "address_value": 2150212096,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "start_gate2",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "enssstart2_zh.o",
+      "enssstart2.o"
+    ],
+    "entry": null,
+    "address": "START_GATE_ADDR",
+    "address_value": 2150212096,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "start_gate7",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "enssstart7_zh.o",
+      "enssstart7.o"
+    ],
+    "entry": null,
+    "address": "START_GATE_ADDR",
+    "address_value": 2150212096,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course0DT",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "endtcrs0.o",
+      "endtsca0.o",
+      "endtdemo0.o"
+    ],
+    "entry": null,
+    "address": "COURSE_DT",
+    "address_value": 2150656000,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course1DT",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "endtcrs1.o",
+      "endtsca1.o",
+      "endtdemo1.o",
+      "endtrev1.o"
+    ],
+    "entry": null,
+    "address": "COURSE_DT",
+    "address_value": 2150656000,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course2DT",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "endtcrs2.o",
+      "endtsca2.o",
+      "endtdemo2.o",
+      "endtrev2.o"
+    ],
+    "entry": null,
+    "address": "COURSE_DT",
+    "address_value": 2150656000,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course3DT",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "endtcrs3.o",
+      "endtsca3.o",
+      "endtdemo3.o",
+      "endtrev3.o"
+    ],
+    "entry": null,
+    "address": "COURSE_DT",
+    "address_value": 2150656000,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course4DT",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "endtcrs4.o",
+      "endtsca4.o",
+      "endtdemo4.o",
+      "endtrev4.o"
+    ],
+    "entry": null,
+    "address": "COURSE_DT",
+    "address_value": 2150656000,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course5DT",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "endtcrs5.o",
+      "endtsca5.o",
+      "endtdemo5.o",
+      "endtrev5.o"
+    ],
+    "entry": null,
+    "address": "COURSE_DT",
+    "address_value": 2150656000,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course6DT",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "endtcrs6.o",
+      "endtsca6.o",
+      "endtdemo6.o",
+      "endtrev6.o"
+    ],
+    "entry": null,
+    "address": "COURSE_DT",
+    "address_value": 2150656000,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course7DT",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "endtcrs7.o",
+      "endtsca7.o",
+      "endtdemo7.o",
+      "endtrev7.o"
+    ],
+    "entry": null,
+    "address": "COURSE_DT",
+    "address_value": 2150656000,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course8DT",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "endtcrs8.o",
+      "endtsca8.o",
+      "endtdemo8.o",
+      "endtrev8.o"
+    ],
+    "entry": null,
+    "address": "COURSE_DT",
+    "address_value": 2150656000,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course2DT_2p",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "endtcrs2_2p.o"
+    ],
+    "entry": null,
+    "address": "COURSE_DT",
+    "address_value": 2150656000,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "course5DT_2p",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "endtcrs5_2p.o"
+    ],
+    "entry": null,
+    "address": "COURSE_DT",
+    "address_value": 2150656000,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankCPackSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_sscpack.o",
+      "kn_sscpack_zh.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankCPackEfSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_sscpack_e.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankCPackGeSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_sscpack_g.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankTitleSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_sstitle.o",
+      "kn_sstitle_zh.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankTitleGerSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_sstitle_ger.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankRaceSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_ssrace.o",
+      "kn_ssrace_zh.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankRace2pSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_ssrace2p_zh.o",
+      "kn_ssrace2p.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankRetireSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_ssretire.o",
+      "kn_ssretire_zh.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankGoalSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_ssgoal.o",
+      "kn_ssgoal_zh.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankNewRecordSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_ssnewrecord.o",
+      "kn_ssnewrecord_zh.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankParkSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_sspark.o",
+      "kn_sspark_zh.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankParkGerSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_sspark_ger.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankTimeUpSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_sstimeup.o",
+      "kn_sstimeup_zh.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankGameOverSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_ssgameover.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankMachineSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_ssmachine.o",
+      "kn_ssmachine_zh.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankCourseSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_sscourse.o",
+      "kn_sscourse_zh.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankResultSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_ssresult.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankCalcSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_sscalc.o",
+      "kn_sscalc_zh.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankVsResultSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_ssvsresult.o",
+      "kn_ssvsresult_zh.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankCTitleSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_ssctitle.o",
+      "kn_ssctitle_zh.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankConfigSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_ssconfig.o",
+      "kn_ssconfig_zh.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankCfgNameSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_sscfgname.o",
+      "kn_sscfgname_zh.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankCfgRecSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_sscfgrec.o",
+      "kn_sscfgrec_zh.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankCfgCondSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_sscfgcond.o",
+      "kn_sscfgcond_zh.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankCfgSoundSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_sscfgsound.o",
+      "kn_sscfgsound_zh.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankCfgEraseSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_sscfgerase.o",
+      "kn_sscfgerase_zh.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankCfgSaveSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_sscfgsave.o",
+      "kn_sscfgsave_zh.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankPfsMesSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_sspfsmes.o",
+      "kn_sspfsmes_zh.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankPfsMesGhostSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_sspfsmes_ghost.o",
+      "kn_sspfsmes_ghost_zh.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankTourEndSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_sstourend.o",
+      "kn_sstourend_zh.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankEditSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "enssedit.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankLetter",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "kn_ssletter.o",
+      "kn_ssletter_zh.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankCMap1SEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "hjm_sscourse_map1.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankCMap2SEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "hjm_sscourse_map2.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankCMap3SEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "hjm_sscourse_map3.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankCMap4SEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "hjm_sscourse_map4.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankCMap5SEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "hjm_sscourse_map5.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankCMap6SEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "hjm_sscourse_map6.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankCMap7SEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "hjm_sscourse_map7.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankCMap8SEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "hjm_sscourse_map8.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankCMapDSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "hjm_sscourse_mapD.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankBackFine1SEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_back_fine1.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankBackEveSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_back_eve.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankBackStoSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_back_sto.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankBackMornSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_back_morn.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankBackDirtSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_back_dirt.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankBackNightSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_back_night.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankBackFine2SEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_back_fine2.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankSeaFine1SEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_sea_fine1.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankSeaEveSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_sea_eve.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankSeaStoSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_sea_sto.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankSeaMornSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_sea_morn.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankSeaDirtSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_sea_dirt.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankSeaNightSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_sea_night.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankSeaFine2SEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_sea_fine2.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankSeaIceSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_sea_ice.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankSeaFine1_2pSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_sea_fine1_2p.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankSeaEve_2pSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_sea_eve_2p.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankSeaSto_2pSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_sea_sto_2p.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankSeaMorn_2pSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_sea_morn_2p.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankSeaDirt_2pSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_sea_dirt_2p.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankSeaNight_2pSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_sea_night_2p.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankSeaFine2_2pSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_sea_fine2_2p.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankSeaIce_2pSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_sea_ice_2p.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankBottomFine1SEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_bottom_fine1.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankBottomEveSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_bottom_eve.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankBottomStoSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_bottom_sto.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankBottomMornSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_bottom_morn.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankBottomDirtSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_bottom_dirt.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankBottomNightSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_bottom_night.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankBottomFine2SEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_bottom_fine2.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankCloFine1SEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_clo_fine1.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankCloEveSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_clo_eve.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankCloStoSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_clo_sto.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankCloMornSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_clo_morn.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankCloDirtSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_clo_dirt.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankCloNightSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_clo_night.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankCloFine2SEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_clo_fine2.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankSunDolSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_sun_dol.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankSunEveSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "sot_sun.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankJetSki0SEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "dai_ssJetSki0_zh.o",
+      "dai_ssJetSki0.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankJetSki0bSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "dai_ssJetSki0b_zh.o",
+      "dai_ssJetSki0b.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankJetSki1SEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "dai_ssJetSki1_zh.o",
+      "dai_ssJetSki1.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankJetSki1bSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "dai_ssJetSki1b_zh.o",
+      "dai_ssJetSki1b.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankJetSki2SEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "dai_ssJetSki2_zh.o",
+      "dai_ssJetSki2.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankJetSki2bSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "dai_ssJetSki2b_zh.o",
+      "dai_ssJetSki2b.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankJetSki3SEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "dai_ssJetSki3_zh.o",
+      "dai_ssJetSki3.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankJetSki3bSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "dai_ssJetSki3b_zh.o",
+      "dai_ssJetSki3b.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankJetSki4SEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "dai_ssJetSki4_zh.o",
+      "dai_ssJetSki4.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankJetSki4bSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "dai_ssJetSki4b_zh.o",
+      "dai_ssJetSki4b.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankJetSki5SEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "dai_ssJetSki5_zh.o",
+      "dai_ssJetSki5.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankJetSki5bSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "dai_ssJetSki5b_zh.o",
+      "dai_ssJetSki5b.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankJetSki6SEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "dai_ssJetSki6_zh.o",
+      "dai_ssJetSki6.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankJetSki6bSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "dai_ssJetSki6b_zh.o",
+      "dai_ssJetSki6b.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankJetSki7SEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "dai_ssJetSki7_zh.o",
+      "dai_ssJetSki7.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankJetSki7bSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "dai_ssJetSki7b_zh.o",
+      "dai_ssJetSki7b.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankDolphinSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "dai_dolphin.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankDolphinRedSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "dai_dolphin_r.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankOrcaSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "dai_orca.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankFishSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "dai_fish.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankSeagullSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "dai_seagull.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankTroutSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "dai_trout.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankFlyfishSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "dai_flyfish.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankDuckSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "dai_duck.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankHelicopterSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "dai_helicopter.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankPenguinSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "dai_penguin.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankEndShapeSEG",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "dai_end_s.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "bankensssca",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "ensssca_zh.o",
+      "ensssca.o"
+    ],
+    "entry": null,
+    "address": "BANK_SEGMENT",
+    "address_value": 8,
+    "after": null,
+    "number": null,
+    "segment_id": 8,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  },
+  {
+    "name": "Audiobank",
+    "flags": [
+      "RAW"
+    ],
+    "includes": [
+      "audio/wr64_audio.banks.cart",
+      "audio/zh/wr64_audio.banks.cart"
+    ],
+    "entry": null,
+    "address": null,
+    "address_value": null,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": false,
+    "is_overlay": false
+  },
+  {
+    "name": "Audiotable",
+    "flags": [
+      "RAW"
+    ],
+    "includes": [
+      "audio/wr64_audio.table.cart",
+      "audio/zh/wr64_audio.table.cart"
+    ],
+    "entry": null,
+    "address": null,
+    "address_value": null,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": false,
+    "is_overlay": false
+  },
+  {
+    "name": "Audioseq",
+    "flags": [
+      "RAW"
+    ],
+    "includes": [
+      "audio/wr64_audio.music.cart",
+      "audio/zh/wr64_audio.music.cart"
+    ],
+    "entry": null,
+    "address": null,
+    "address_value": null,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": false,
+    "is_overlay": false
+  },
+  {
+    "name": "Buffers",
+    "flags": [
+      "OBJECT"
+    ],
+    "includes": [
+      "audio/audioheap.o",
+      "audio/audiowork.o"
+    ],
+    "entry": null,
+    "address": "AUDIO_HEAP",
+    "address_value": 2147487744,
+    "after": null,
+    "number": null,
+    "segment_id": null,
+    "is_boot": false,
+    "is_code": false,
+    "is_object": true,
+    "is_overlay": false
+  }
+]

@@ -1,0 +1,3027 @@
+{
+  "rom_header": {
+    "pc": 2147772416,
+    "crc": "492f4b61",
+    "title": "WAVE RACE 64",
+    "size": 8388608,
+    "source_format": "z64",
+    "source_path": "H:\\WaveRace64Recomp\\wr64.us.revA.z64"
+  },
+  "segments": [
+    {
+      "name": "codeSEG",
+      "rom_start": 4096,
+      "rom_end": 525808,
+      "size": 521712,
+      "vram": 2147772416,
+      "flags": [
+        "BOOT",
+        "OBJECT"
+      ],
+      "includes": [
+        "code.o",
+        "$(ROOT)/usr/lib/PR/rspboot.o",
+        "$(ROOT)/usr/lib/PR/gspF3DEX.fifo.o",
+        "audio/zh/audio_hm.o",
+        "audio/zh/audio_hs.o",
+        "audio/zh/audio_hb.o",
+        "audio/zh/audio_hw.o",
+        "audio/audio_hm.o",
+        "audio/audio_hs.o",
+        "audio/audio_hb.o",
+        "audio/audio_hw.o",
+        "audio/aspMain.o"
+      ],
+      "is_code": true,
+      "is_overlay": false
+    },
+    {
+      "name": "loadCodeSEG",
+      "rom_start": 525808,
+      "rom_end": 578608,
+      "size": 52800,
+      "vram": 2148294128,
+      "flags": [],
+      "includes": [
+        "dai_anim_data.o",
+        "hjm_camera.o",
+        "kn_psrestart.o",
+        "kn_psname.o",
+        "kn_psscrec.o",
+        "kn_message.o",
+        "kn_pause.o",
+        "kn_shape.o",
+        "kn_gword.o",
+        "kn_mask.o",
+        "kn_font.o",
+        "kn_init.o",
+        "enmath.o",
+        "enstatus.o"
+      ],
+      "is_code": true,
+      "is_overlay": true
+    },
+    {
+      "name": "loadAudioTable",
+      "rom_start": 578608,
+      "rom_end": 586576,
+      "size": 7968,
+      "vram": 2147768320,
+      "flags": [],
+      "includes": [
+        "audio/audiotable.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "zbufferSEG",
+      "rom_start": 586576,
+      "rom_end": 586640,
+      "size": 64,
+      "vram": 2150236160,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ot_zbuffer.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "fbufferSEG",
+      "rom_start": 586640,
+      "rom_end": 586704,
+      "size": 64,
+      "vram": 2151217152,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ot_fbuffer.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "dramStackSEG",
+      "rom_start": 586704,
+      "rom_end": 586768,
+      "size": 64,
+      "vram": 2147768320,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_stack.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "cameraBuffer",
+      "rom_start": 586768,
+      "rom_end": 586832,
+      "size": 64,
+      "vram": 2153250816,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "hjm_memory.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "staticSEG",
+      "rom_start": 586832,
+      "rom_end": 586896,
+      "size": 64,
+      "vram": 1,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ot_ssegment.o",
+        "ot_ssletter.o",
+        "ot_ssmask.o",
+        "ot_sshover.o",
+        "ot_sscup.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "staticGameSEG",
+      "rom_start": 586896,
+      "rom_end": 586960,
+      "size": 64,
+      "vram": null,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_sssea.o",
+        "sot_ssworld.o",
+        "enstatic.o",
+        "enssbuoy_zh.o",
+        "enssbuoy.o",
+        "enssfont.o",
+        "ensssplash.o",
+        "kn_sscommon.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "nusmarkSEG",
+      "rom_start": 586960,
+      "rom_end": 587024,
+      "size": 64,
+      "vram": null,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_ssnusmark.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "staticEngSEG",
+      "rom_start": 587024,
+      "rom_end": 587088,
+      "size": 64,
+      "vram": null,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_sslanguage.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "staticGerSEG",
+      "rom_start": 587088,
+      "rom_end": 587152,
+      "size": 64,
+      "vram": null,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_ssgerman.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "autoSEG",
+      "rom_start": 587152,
+      "rom_end": 587216,
+      "size": 64,
+      "vram": 2,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ot_asegment.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "dynamicSEG",
+      "rom_start": 587216,
+      "rom_end": 587280,
+      "size": 64,
+      "vram": 3,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ot_dsegment.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "screenSEG",
+      "rom_start": 587280,
+      "rom_end": 587344,
+      "size": 64,
+      "vram": 4,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ot_vsegment.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "endynamic",
+      "rom_start": 587344,
+      "rom_end": 587408,
+      "size": 64,
+      "vram": 5,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "endynamic.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "sot_dynamic",
+      "rom_start": 587408,
+      "rom_end": 587472,
+      "size": 64,
+      "vram": 6,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_dynamic.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "knDynamicSEG",
+      "rom_start": 587472,
+      "rom_end": 587536,
+      "size": 64,
+      "vram": 7,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_dynamic.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "anime",
+      "rom_start": 587536,
+      "rom_end": 587600,
+      "size": 64,
+      "vram": null,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_anime.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "endface",
+      "rom_start": 587600,
+      "rom_end": 587664,
+      "size": 64,
+      "vram": null,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_endface.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "progEdit",
+      "rom_start": 587664,
+      "rom_end": 587728,
+      "size": 64,
+      "vram": 2150793216,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "enpsedit.o",
+        "enpsmachine.o"
+      ],
+      "is_code": true,
+      "is_overlay": true
+    },
+    {
+      "name": "progCPack",
+      "rom_start": 587728,
+      "rom_end": 587792,
+      "size": 64,
+      "vram": 2150389760,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_pscpack.o"
+      ],
+      "is_code": true,
+      "is_overlay": true
+    },
+    {
+      "name": "progTitle",
+      "rom_start": 587792,
+      "rom_end": 587856,
+      "size": 64,
+      "vram": 2150389760,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_pstitle.o"
+      ],
+      "is_code": true,
+      "is_overlay": true
+    },
+    {
+      "name": "progRace",
+      "rom_start": 587856,
+      "rom_end": 587920,
+      "size": 64,
+      "vram": 2150389760,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_psrace.o"
+      ],
+      "is_code": true,
+      "is_overlay": true
+    },
+    {
+      "name": "progMachine",
+      "rom_start": 587920,
+      "rom_end": 587984,
+      "size": 64,
+      "vram": 2150389760,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_psmachine.o"
+      ],
+      "is_code": true,
+      "is_overlay": true
+    },
+    {
+      "name": "progCTitle",
+      "rom_start": 587984,
+      "rom_end": 588048,
+      "size": 64,
+      "vram": 2150389760,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_psctitle.o"
+      ],
+      "is_code": true,
+      "is_overlay": true
+    },
+    {
+      "name": "progCourse",
+      "rom_start": 588048,
+      "rom_end": 588112,
+      "size": 64,
+      "vram": 2150389760,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_pscourse.o"
+      ],
+      "is_code": true,
+      "is_overlay": true
+    },
+    {
+      "name": "progResult",
+      "rom_start": 588112,
+      "rom_end": 588176,
+      "size": 64,
+      "vram": 2150389760,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_psresult.o",
+        "kn_psgameover.o"
+      ],
+      "is_code": true,
+      "is_overlay": true
+    },
+    {
+      "name": "progRecord",
+      "rom_start": 588176,
+      "rom_end": 588240,
+      "size": 64,
+      "vram": 2150389760,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_psrecord.o"
+      ],
+      "is_code": true,
+      "is_overlay": true
+    },
+    {
+      "name": "progCalc",
+      "rom_start": 588240,
+      "rom_end": 588304,
+      "size": 64,
+      "vram": 2150389760,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_pscalc.o"
+      ],
+      "is_code": true,
+      "is_overlay": true
+    },
+    {
+      "name": "progVsResult",
+      "rom_start": 588304,
+      "rom_end": 588368,
+      "size": 64,
+      "vram": 2150389760,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_psvsresult.o"
+      ],
+      "is_code": true,
+      "is_overlay": true
+    },
+    {
+      "name": "progConfig",
+      "rom_start": 588368,
+      "rom_end": 589856,
+      "size": 1488,
+      "vram": 2150389760,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_psconfig.o"
+      ],
+      "is_code": true,
+      "is_overlay": true
+    },
+    {
+      "name": "progCfgName",
+      "rom_start": 589856,
+      "rom_end": 609952,
+      "size": 20096,
+      "vram": 2150389760,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_pscfgname.o"
+      ],
+      "is_code": true,
+      "is_overlay": true
+    },
+    {
+      "name": "progCfgRec",
+      "rom_start": 609952,
+      "rom_end": 610288,
+      "size": 336,
+      "vram": 2150389760,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_pscfgrec.o"
+      ],
+      "is_code": true,
+      "is_overlay": true
+    },
+    {
+      "name": "progCfgCond",
+      "rom_start": 610288,
+      "rom_end": 613232,
+      "size": 2944,
+      "vram": 2150389760,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_pscfgcond.o"
+      ],
+      "is_code": true,
+      "is_overlay": true
+    },
+    {
+      "name": "progCfgSound",
+      "rom_start": 613232,
+      "rom_end": 614064,
+      "size": 832,
+      "vram": 2150389760,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_pscfgsound.o"
+      ],
+      "is_code": true,
+      "is_overlay": true
+    },
+    {
+      "name": "progCfgErase",
+      "rom_start": 614064,
+      "rom_end": 658176,
+      "size": 44112,
+      "vram": 2150389760,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_pscfgerase.o"
+      ],
+      "is_code": true,
+      "is_overlay": true
+    },
+    {
+      "name": "progCfgSave",
+      "rom_start": 658176,
+      "rom_end": 669648,
+      "size": 11472,
+      "vram": 2150389760,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_pscfgsave.o"
+      ],
+      "is_code": true,
+      "is_overlay": true
+    },
+    {
+      "name": "progRestart",
+      "rom_start": 669648,
+      "rom_end": 689312,
+      "size": 19664,
+      "vram": 2150389760,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_psrestart2.o"
+      ],
+      "is_code": true,
+      "is_overlay": true
+    },
+    {
+      "name": "progTourEnd",
+      "rom_start": 689312,
+      "rom_end": 691344,
+      "size": 2032,
+      "vram": 2150389760,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_pstourend.o"
+      ],
+      "is_code": true,
+      "is_overlay": true
+    },
+    {
+      "name": "course0",
+      "rom_start": 691344,
+      "rom_end": 691856,
+      "size": 512,
+      "vram": 13,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ensscrs0.o",
+        "ensscrs0_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course1",
+      "rom_start": 691856,
+      "rom_end": 691920,
+      "size": 64,
+      "vram": 13,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ensscrs1.o",
+        "ensscrs1_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course2",
+      "rom_start": 691920,
+      "rom_end": 691984,
+      "size": 64,
+      "vram": 13,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ensscrs2.o",
+        "ensscrs2_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course3",
+      "rom_start": 691984,
+      "rom_end": 692048,
+      "size": 64,
+      "vram": 13,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ensscrs3.o",
+        "ensscrs3_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course4",
+      "rom_start": 692048,
+      "rom_end": 692112,
+      "size": 64,
+      "vram": 13,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ensscrs4.o",
+        "ensscrs4_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course5",
+      "rom_start": 692112,
+      "rom_end": 692176,
+      "size": 64,
+      "vram": 13,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ensscrs5.o",
+        "ensscrs5_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course6",
+      "rom_start": 692176,
+      "rom_end": 692240,
+      "size": 64,
+      "vram": 13,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ensscrs6.o",
+        "ensscrs6_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course7",
+      "rom_start": 692240,
+      "rom_end": 692304,
+      "size": 64,
+      "vram": 13,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ensscrs7.o",
+        "ensscrs7_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course8",
+      "rom_start": 692304,
+      "rom_end": 692368,
+      "size": 64,
+      "vram": 13,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ensscrs8.o",
+        "ensscrs8_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course7_end",
+      "rom_start": 692368,
+      "rom_end": 692432,
+      "size": 64,
+      "vram": 13,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ensscrs7_end.o",
+        "ensscrs7_end_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course1_2p",
+      "rom_start": 692432,
+      "rom_end": 692496,
+      "size": 64,
+      "vram": 13,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ensscrs1_2p.o",
+        "ensscrs1_2p_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course2_2p",
+      "rom_start": 692496,
+      "rom_end": 692560,
+      "size": 64,
+      "vram": 13,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ensscrs2_2p.o",
+        "ensscrs2_2p_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course3_2p",
+      "rom_start": 692560,
+      "rom_end": 692624,
+      "size": 64,
+      "vram": 13,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ensscrs3_2p.o",
+        "ensscrs3_2p_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course4_2p",
+      "rom_start": 692624,
+      "rom_end": 692688,
+      "size": 64,
+      "vram": 13,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ensscrs4_2p.o",
+        "ensscrs4_2p_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course5_2p",
+      "rom_start": 692688,
+      "rom_end": 692752,
+      "size": 64,
+      "vram": 13,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ensscrs5_2p.o",
+        "ensscrs5_2p_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course6_2p",
+      "rom_start": 692752,
+      "rom_end": 996928,
+      "size": 304176,
+      "vram": 13,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ensscrs6_2p.o",
+        "ensscrs6_2p_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course7_2p",
+      "rom_start": 996928,
+      "rom_end": 997312,
+      "size": 384,
+      "vram": 13,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ensscrs7_2p.o",
+        "ensscrs7_2p_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course8_2p",
+      "rom_start": 997312,
+      "rom_end": 1002352,
+      "size": 5040,
+      "vram": 13,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ensscrs8_2p.o",
+        "ensscrs8_2p_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course1_com",
+      "rom_start": 1002352,
+      "rom_end": 1003408,
+      "size": 1056,
+      "vram": 14,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ensscom1.o",
+        "ensscom1_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course2_com",
+      "rom_start": 1003408,
+      "rom_end": 1110624,
+      "size": 107216,
+      "vram": 14,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ensscom2.o",
+        "ensscom2_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course3_com",
+      "rom_start": 1110624,
+      "rom_end": 1110928,
+      "size": 304,
+      "vram": 14,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ensscom3_zh.o",
+        "ensscom3.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course4_com",
+      "rom_start": 1110928,
+      "rom_end": 1114720,
+      "size": 3792,
+      "vram": 14,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ensscom4_zh.o",
+        "ensscom4.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course5_com",
+      "rom_start": 1114720,
+      "rom_end": 1114976,
+      "size": 256,
+      "vram": 14,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ensscom5_zh.o",
+        "ensscom5.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course6_com",
+      "rom_start": 1114976,
+      "rom_end": 1137216,
+      "size": 22240,
+      "vram": 14,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ensscom6_zh.o",
+        "ensscom6.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course7_com",
+      "rom_start": 1137216,
+      "rom_end": 1141232,
+      "size": 4016,
+      "vram": 14,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ensscom7_zh.o",
+        "ensscom7.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course8_com",
+      "rom_start": 1141232,
+      "rom_end": 1145328,
+      "size": 4096,
+      "vram": 14,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ensscom8_zh.o",
+        "ensscom8.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "start_gate1",
+      "rom_start": 1145328,
+      "rom_end": 1149424,
+      "size": 4096,
+      "vram": 2150212096,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "enssstart1_zh.o",
+        "enssstart1.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "start_gate2",
+      "rom_start": 1149424,
+      "rom_end": 1153520,
+      "size": 4096,
+      "vram": 2150212096,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "enssstart2_zh.o",
+        "enssstart2.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "start_gate7",
+      "rom_start": 1153520,
+      "rom_end": 1157616,
+      "size": 4096,
+      "vram": 2150212096,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "enssstart7_zh.o",
+        "enssstart7.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course0DT",
+      "rom_start": 1157616,
+      "rom_end": 1161712,
+      "size": 4096,
+      "vram": 2150656000,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "endtcrs0.o",
+        "endtsca0.o",
+        "endtdemo0.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course1DT",
+      "rom_start": 1161712,
+      "rom_end": 1165808,
+      "size": 4096,
+      "vram": 2150656000,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "endtcrs1.o",
+        "endtsca1.o",
+        "endtdemo1.o",
+        "endtrev1.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course2DT",
+      "rom_start": 1165808,
+      "rom_end": 1169904,
+      "size": 4096,
+      "vram": 2150656000,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "endtcrs2.o",
+        "endtsca2.o",
+        "endtdemo2.o",
+        "endtrev2.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course3DT",
+      "rom_start": 1169904,
+      "rom_end": 1174000,
+      "size": 4096,
+      "vram": 2150656000,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "endtcrs3.o",
+        "endtsca3.o",
+        "endtdemo3.o",
+        "endtrev3.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course4DT",
+      "rom_start": 1174000,
+      "rom_end": 1178096,
+      "size": 4096,
+      "vram": 2150656000,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "endtcrs4.o",
+        "endtsca4.o",
+        "endtdemo4.o",
+        "endtrev4.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course5DT",
+      "rom_start": 1178096,
+      "rom_end": 1178560,
+      "size": 464,
+      "vram": 2150656000,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "endtcrs5.o",
+        "endtsca5.o",
+        "endtdemo5.o",
+        "endtrev5.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course6DT",
+      "rom_start": 1178560,
+      "rom_end": 1197216,
+      "size": 18656,
+      "vram": 2150656000,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "endtcrs6.o",
+        "endtsca6.o",
+        "endtdemo6.o",
+        "endtrev6.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course7DT",
+      "rom_start": 1197216,
+      "rom_end": 1220400,
+      "size": 23184,
+      "vram": 2150656000,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "endtcrs7.o",
+        "endtsca7.o",
+        "endtdemo7.o",
+        "endtrev7.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course8DT",
+      "rom_start": 1220400,
+      "rom_end": 1220912,
+      "size": 512,
+      "vram": 2150656000,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "endtcrs8.o",
+        "endtsca8.o",
+        "endtdemo8.o",
+        "endtrev8.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course2DT_2p",
+      "rom_start": 1220912,
+      "rom_end": 1221872,
+      "size": 960,
+      "vram": 2150656000,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "endtcrs2_2p.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "course5DT_2p",
+      "rom_start": 1221872,
+      "rom_end": 1222832,
+      "size": 960,
+      "vram": 2150656000,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "endtcrs5_2p.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankCPackSEG",
+      "rom_start": 1222832,
+      "rom_end": 1223792,
+      "size": 960,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_sscpack.o",
+        "kn_sscpack_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankCPackEfSEG",
+      "rom_start": 1223792,
+      "rom_end": 1224736,
+      "size": 944,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_sscpack_e.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankCPackGeSEG",
+      "rom_start": 1224736,
+      "rom_end": 1225232,
+      "size": 496,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_sscpack_g.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankTitleSEG",
+      "rom_start": 1225232,
+      "rom_end": 1225680,
+      "size": 448,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_sstitle.o",
+        "kn_sstitle_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankTitleGerSEG",
+      "rom_start": 1225680,
+      "rom_end": 1226192,
+      "size": 512,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_sstitle_ger.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankRaceSEG",
+      "rom_start": 1226192,
+      "rom_end": 1226640,
+      "size": 448,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_ssrace.o",
+        "kn_ssrace_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankRace2pSEG",
+      "rom_start": 1226640,
+      "rom_end": 1227136,
+      "size": 496,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_ssrace2p_zh.o",
+        "kn_ssrace2p.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankRetireSEG",
+      "rom_start": 1227136,
+      "rom_end": 1228112,
+      "size": 976,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_ssretire.o",
+        "kn_ssretire_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankGoalSEG",
+      "rom_start": 1228112,
+      "rom_end": 1228592,
+      "size": 480,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_ssgoal.o",
+        "kn_ssgoal_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankNewRecordSEG",
+      "rom_start": 1228592,
+      "rom_end": 1230016,
+      "size": 1424,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_ssnewrecord.o",
+        "kn_ssnewrecord_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankParkSEG",
+      "rom_start": 1230016,
+      "rom_end": 1230480,
+      "size": 464,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_sspark.o",
+        "kn_sspark_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankParkGerSEG",
+      "rom_start": 1230480,
+      "rom_end": 1231472,
+      "size": 992,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_sspark_ger.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankTimeUpSEG",
+      "rom_start": 1231472,
+      "rom_end": 1231936,
+      "size": 464,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_sstimeup.o",
+        "kn_sstimeup_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankGameOverSEG",
+      "rom_start": 1231936,
+      "rom_end": 1232400,
+      "size": 464,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_ssgameover.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankMachineSEG",
+      "rom_start": 1232400,
+      "rom_end": 1233376,
+      "size": 976,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_ssmachine.o",
+        "kn_ssmachine_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankCourseSEG",
+      "rom_start": 1233376,
+      "rom_end": 1233856,
+      "size": 480,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_sscourse.o",
+        "kn_sscourse_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankResultSEG",
+      "rom_start": 1233856,
+      "rom_end": 1234320,
+      "size": 464,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_ssresult.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankCalcSEG",
+      "rom_start": 1234320,
+      "rom_end": 1234816,
+      "size": 496,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_sscalc.o",
+        "kn_sscalc_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankVsResultSEG",
+      "rom_start": 1234816,
+      "rom_end": 1235296,
+      "size": 480,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_ssvsresult.o",
+        "kn_ssvsresult_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankCTitleSEG",
+      "rom_start": 1235296,
+      "rom_end": 1236736,
+      "size": 1440,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_ssctitle.o",
+        "kn_ssctitle_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankConfigSEG",
+      "rom_start": 1236736,
+      "rom_end": 1237200,
+      "size": 464,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_ssconfig.o",
+        "kn_ssconfig_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankCfgNameSEG",
+      "rom_start": 1237200,
+      "rom_end": 1237552,
+      "size": 352,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_sscfgname.o",
+        "kn_sscfgname_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankCfgRecSEG",
+      "rom_start": 1237552,
+      "rom_end": 1237936,
+      "size": 384,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_sscfgrec.o",
+        "kn_sscfgrec_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankCfgCondSEG",
+      "rom_start": 1237936,
+      "rom_end": 1238400,
+      "size": 464,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_sscfgcond.o",
+        "kn_sscfgcond_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankCfgSoundSEG",
+      "rom_start": 1238400,
+      "rom_end": 1238464,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_sscfgsound.o",
+        "kn_sscfgsound_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankCfgEraseSEG",
+      "rom_start": 1238464,
+      "rom_end": 1238528,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_sscfgerase.o",
+        "kn_sscfgerase_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankCfgSaveSEG",
+      "rom_start": 1238528,
+      "rom_end": 1238592,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_sscfgsave.o",
+        "kn_sscfgsave_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankPfsMesSEG",
+      "rom_start": 1238592,
+      "rom_end": 1238656,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_sspfsmes.o",
+        "kn_sspfsmes_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankPfsMesGhostSEG",
+      "rom_start": 1238656,
+      "rom_end": 1238720,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_sspfsmes_ghost.o",
+        "kn_sspfsmes_ghost_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankTourEndSEG",
+      "rom_start": 1238720,
+      "rom_end": 1248976,
+      "size": 10256,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_sstourend.o",
+        "kn_sstourend_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankEditSEG",
+      "rom_start": 1248976,
+      "rom_end": 1249264,
+      "size": 288,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "enssedit.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankLetter",
+      "rom_start": 1249264,
+      "rom_end": 1249744,
+      "size": 480,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "kn_ssletter.o",
+        "kn_ssletter_zh.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankCMap1SEG",
+      "rom_start": 1249744,
+      "rom_end": 1250720,
+      "size": 976,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "hjm_sscourse_map1.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankCMap2SEG",
+      "rom_start": 1250720,
+      "rom_end": 1258752,
+      "size": 8032,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "hjm_sscourse_map2.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankCMap3SEG",
+      "rom_start": 1258752,
+      "rom_end": 1258816,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "hjm_sscourse_map3.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankCMap4SEG",
+      "rom_start": 1258816,
+      "rom_end": 1258880,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "hjm_sscourse_map4.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankCMap5SEG",
+      "rom_start": 1258880,
+      "rom_end": 1259472,
+      "size": 592,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "hjm_sscourse_map5.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankCMap6SEG",
+      "rom_start": 1259472,
+      "rom_end": 1259536,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "hjm_sscourse_map6.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankCMap7SEG",
+      "rom_start": 1259536,
+      "rom_end": 1259600,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "hjm_sscourse_map7.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankCMap8SEG",
+      "rom_start": 1259600,
+      "rom_end": 1259664,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "hjm_sscourse_map8.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankCMapDSEG",
+      "rom_start": 1259664,
+      "rom_end": 1261200,
+      "size": 1536,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "hjm_sscourse_mapD.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankBackFine1SEG",
+      "rom_start": 1261200,
+      "rom_end": 1272720,
+      "size": 11520,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_back_fine1.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankBackEveSEG",
+      "rom_start": 1272720,
+      "rom_end": 1292592,
+      "size": 19872,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_back_eve.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankBackStoSEG",
+      "rom_start": 1292592,
+      "rom_end": 1292848,
+      "size": 256,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_back_sto.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankBackMornSEG",
+      "rom_start": 1292848,
+      "rom_end": 1296624,
+      "size": 3776,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_back_morn.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankBackDirtSEG",
+      "rom_start": 1296624,
+      "rom_end": 1296928,
+      "size": 304,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_back_dirt.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankBackNightSEG",
+      "rom_start": 1296928,
+      "rom_end": 1299504,
+      "size": 2576,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_back_night.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankBackFine2SEG",
+      "rom_start": 1299504,
+      "rom_end": 1341056,
+      "size": 41552,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_back_fine2.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankSeaFine1SEG",
+      "rom_start": 1341056,
+      "rom_end": 1341568,
+      "size": 512,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_sea_fine1.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankSeaEveSEG",
+      "rom_start": 1341568,
+      "rom_end": 1361552,
+      "size": 19984,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_sea_eve.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankSeaStoSEG",
+      "rom_start": 1361552,
+      "rom_end": 1362064,
+      "size": 512,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_sea_sto.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankSeaMornSEG",
+      "rom_start": 1362064,
+      "rom_end": 1576000,
+      "size": 213936,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_sea_morn.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankSeaDirtSEG",
+      "rom_start": 1576000,
+      "rom_end": 1576064,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_sea_dirt.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankSeaNightSEG",
+      "rom_start": 1576064,
+      "rom_end": 1576128,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_sea_night.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankSeaFine2SEG",
+      "rom_start": 1576128,
+      "rom_end": 1576192,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_sea_fine2.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankSeaIceSEG",
+      "rom_start": 1576192,
+      "rom_end": 1576576,
+      "size": 384,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_sea_ice.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankSeaFine1_2pSEG",
+      "rom_start": 1576576,
+      "rom_end": 1576928,
+      "size": 352,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_sea_fine1_2p.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankSeaEve_2pSEG",
+      "rom_start": 1576928,
+      "rom_end": 1577152,
+      "size": 224,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_sea_eve_2p.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankSeaSto_2pSEG",
+      "rom_start": 1577152,
+      "rom_end": 1577472,
+      "size": 320,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_sea_sto_2p.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankSeaMorn_2pSEG",
+      "rom_start": 1577472,
+      "rom_end": 1577824,
+      "size": 352,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_sea_morn_2p.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankSeaDirt_2pSEG",
+      "rom_start": 1577824,
+      "rom_end": 1578080,
+      "size": 256,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_sea_dirt_2p.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankSeaNight_2pSEG",
+      "rom_start": 1578080,
+      "rom_end": 1578144,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_sea_night_2p.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankSeaFine2_2pSEG",
+      "rom_start": 1578144,
+      "rom_end": 1578208,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_sea_fine2_2p.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankSeaIce_2pSEG",
+      "rom_start": 1578208,
+      "rom_end": 1578272,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_sea_ice_2p.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankBottomFine1SEG",
+      "rom_start": 1578272,
+      "rom_end": 1578336,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_bottom_fine1.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankBottomEveSEG",
+      "rom_start": 1578336,
+      "rom_end": 1578400,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_bottom_eve.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankBottomStoSEG",
+      "rom_start": 1578400,
+      "rom_end": 1578464,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_bottom_sto.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankBottomMornSEG",
+      "rom_start": 1578464,
+      "rom_end": 1578528,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_bottom_morn.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankBottomDirtSEG",
+      "rom_start": 1578528,
+      "rom_end": 1578592,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_bottom_dirt.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankBottomNightSEG",
+      "rom_start": 1578592,
+      "rom_end": 1578656,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_bottom_night.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankBottomFine2SEG",
+      "rom_start": 1578656,
+      "rom_end": 1578720,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_bottom_fine2.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankCloFine1SEG",
+      "rom_start": 1578720,
+      "rom_end": 1578784,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_clo_fine1.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankCloEveSEG",
+      "rom_start": 1578784,
+      "rom_end": 1578848,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_clo_eve.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankCloStoSEG",
+      "rom_start": 1578848,
+      "rom_end": 1578912,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_clo_sto.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankCloMornSEG",
+      "rom_start": 1578912,
+      "rom_end": 1578976,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_clo_morn.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankCloDirtSEG",
+      "rom_start": 1578976,
+      "rom_end": 1579040,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_clo_dirt.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankCloNightSEG",
+      "rom_start": 1579040,
+      "rom_end": 1579104,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_clo_night.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankCloFine2SEG",
+      "rom_start": 1579104,
+      "rom_end": 1579168,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_clo_fine2.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankSunDolSEG",
+      "rom_start": 1579168,
+      "rom_end": 1579232,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_sun_dol.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankSunEveSEG",
+      "rom_start": 1579232,
+      "rom_end": 1579296,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "sot_sun.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankJetSki0SEG",
+      "rom_start": 1579296,
+      "rom_end": 1579360,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "dai_ssJetSki0_zh.o",
+        "dai_ssJetSki0.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankJetSki0bSEG",
+      "rom_start": 1579360,
+      "rom_end": 1579424,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "dai_ssJetSki0b_zh.o",
+        "dai_ssJetSki0b.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankJetSki1SEG",
+      "rom_start": 1579424,
+      "rom_end": 1579488,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "dai_ssJetSki1_zh.o",
+        "dai_ssJetSki1.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankJetSki1bSEG",
+      "rom_start": 1579488,
+      "rom_end": 1579552,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "dai_ssJetSki1b_zh.o",
+        "dai_ssJetSki1b.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankJetSki2SEG",
+      "rom_start": 1579552,
+      "rom_end": 1579616,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "dai_ssJetSki2_zh.o",
+        "dai_ssJetSki2.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankJetSki2bSEG",
+      "rom_start": 1579616,
+      "rom_end": 1579680,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "dai_ssJetSki2b_zh.o",
+        "dai_ssJetSki2b.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankJetSki3SEG",
+      "rom_start": 1579680,
+      "rom_end": 1579744,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "dai_ssJetSki3_zh.o",
+        "dai_ssJetSki3.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankJetSki3bSEG",
+      "rom_start": 1579744,
+      "rom_end": 1579808,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "dai_ssJetSki3b_zh.o",
+        "dai_ssJetSki3b.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankJetSki4SEG",
+      "rom_start": 1579808,
+      "rom_end": 1579872,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "dai_ssJetSki4_zh.o",
+        "dai_ssJetSki4.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankJetSki4bSEG",
+      "rom_start": 1579872,
+      "rom_end": 1579936,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "dai_ssJetSki4b_zh.o",
+        "dai_ssJetSki4b.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankJetSki5SEG",
+      "rom_start": 1579936,
+      "rom_end": 1580000,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "dai_ssJetSki5_zh.o",
+        "dai_ssJetSki5.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankJetSki5bSEG",
+      "rom_start": 1580000,
+      "rom_end": 1580064,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "dai_ssJetSki5b_zh.o",
+        "dai_ssJetSki5b.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankJetSki6SEG",
+      "rom_start": 1580064,
+      "rom_end": 1580128,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "dai_ssJetSki6_zh.o",
+        "dai_ssJetSki6.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankJetSki6bSEG",
+      "rom_start": 1580128,
+      "rom_end": 1580192,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "dai_ssJetSki6b_zh.o",
+        "dai_ssJetSki6b.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankJetSki7SEG",
+      "rom_start": 1580192,
+      "rom_end": 1580256,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "dai_ssJetSki7_zh.o",
+        "dai_ssJetSki7.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankJetSki7bSEG",
+      "rom_start": 1580256,
+      "rom_end": 1580320,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "dai_ssJetSki7b_zh.o",
+        "dai_ssJetSki7b.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankDolphinSEG",
+      "rom_start": 1580320,
+      "rom_end": 1580384,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "dai_dolphin.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankDolphinRedSEG",
+      "rom_start": 1580384,
+      "rom_end": 1580448,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "dai_dolphin_r.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankOrcaSEG",
+      "rom_start": 1580448,
+      "rom_end": 1580512,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "dai_orca.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankFishSEG",
+      "rom_start": 1580512,
+      "rom_end": 1580576,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "dai_fish.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankSeagullSEG",
+      "rom_start": 1580576,
+      "rom_end": 1580640,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "dai_seagull.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankTroutSEG",
+      "rom_start": 1580640,
+      "rom_end": 1580704,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "dai_trout.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankFlyfishSEG",
+      "rom_start": 1580704,
+      "rom_end": 1580768,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "dai_flyfish.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankDuckSEG",
+      "rom_start": 1580768,
+      "rom_end": 1580832,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "dai_duck.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankHelicopterSEG",
+      "rom_start": 1580832,
+      "rom_end": 1580896,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "dai_helicopter.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankPenguinSEG",
+      "rom_start": 1580896,
+      "rom_end": 1580960,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "dai_penguin.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankEndShapeSEG",
+      "rom_start": 1580960,
+      "rom_end": 1581024,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "dai_end_s.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "bankensssca",
+      "rom_start": 1581024,
+      "rom_end": 1581088,
+      "size": 64,
+      "vram": 8,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "ensssca_zh.o",
+        "ensssca.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "Audiobank",
+      "rom_start": 1581088,
+      "rom_end": 1581152,
+      "size": 64,
+      "vram": null,
+      "flags": [
+        "RAW"
+      ],
+      "includes": [
+        "audio/wr64_audio.banks.cart",
+        "audio/zh/wr64_audio.banks.cart"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "Audiotable",
+      "rom_start": 1581152,
+      "rom_end": 1581216,
+      "size": 64,
+      "vram": null,
+      "flags": [
+        "RAW"
+      ],
+      "includes": [
+        "audio/wr64_audio.table.cart",
+        "audio/zh/wr64_audio.table.cart"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "Audioseq",
+      "rom_start": 1581216,
+      "rom_end": 1581280,
+      "size": 64,
+      "vram": null,
+      "flags": [
+        "RAW"
+      ],
+      "includes": [
+        "audio/wr64_audio.music.cart",
+        "audio/zh/wr64_audio.music.cart"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    },
+    {
+      "name": "Buffers",
+      "rom_start": 1581280,
+      "rom_end": 1581344,
+      "size": 64,
+      "vram": 2147487744,
+      "flags": [
+        "OBJECT"
+      ],
+      "includes": [
+        "audio/audioheap.o",
+        "audio/audiowork.o"
+      ],
+      "is_code": false,
+      "is_overlay": false
+    }
+  ]
+}

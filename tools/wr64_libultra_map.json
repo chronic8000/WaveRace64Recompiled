@@ -1,0 +1,5 @@
+{
+  "_comment": "Wire only verified libultra symbols. 0x800C6AD0 is NOT __osDisableInt (it calls 0x800CAAD0 internally).",
+  "0x800C6420": "osCreateThread",
+  "0x800C6570": "osStartThread"
+}
